@@ -9,6 +9,5 @@ def home():
 
 if __name__ == "__main__":
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    context.load_cert_chain(certfile="certificate.pem", keyfile="privateKey.pem")
     
     app.run(host="0.0.0.0", port=8080, debug=True, ssl_context=context)
